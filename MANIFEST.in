@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+recursive-include src/dnhdt *.pyx *.pxd *.py
+recursive-include tests *.py
