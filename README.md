@@ -45,7 +45,7 @@ where `K` = number of classes, `nk` = count of class k, `N` = total samples.
 pip install dnhdt
 
 # From source (requires Cython + C compiler)
-git clone https://github.com/DavidCortes/dnhdt.git
+git clone https://github.com/Daaviid8/DNH/src/dnhdt.git
 cd dnhdt
 pip install -e ".[dev]"
 ```
