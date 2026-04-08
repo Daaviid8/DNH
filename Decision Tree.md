@@ -37,10 +37,10 @@ El método DNH **cuantifica esta no-homogeneidad** y usa esa medida para hacer p
 
 ### La ley clave del paper
 
-El hallazgo central del trabajo original es que el **error de predicción crece exponencialmente** con la asimetría de la distribución:
+El hallazgo central del trabajo original es que el **error de predicción crece racionalmente** con la asimetría de la distribución:
 
 ```
-E ≈ α · exp(β · S)
+E = S / (1 - S)
 ```
 
 donde `S` es una medida de la asimetría. Si los componentes tienen propiedades similares, `S ≈ 0` y el error es mínimo. Si hay componentes muy dispares (por ejemplo, mezclar agua con un polímero gigante), `S` es grande y el error se dispara.
@@ -51,7 +51,7 @@ donde `S` es una medida de la asimetría. Si los componentes tienen propiedades 
 
 Un árbol de decisión divide los datos haciéndose preguntas del tipo *"¿es este valor menor que X?"*. En cada nodo, elige el corte que mejor **separa las clases**.
 
-La medida estándar para evaluar esa separación es el **índice de Gini** — una función cuadrática. **DNH-DT propone reemplazarla con la ley exponencial del paper.**
+La medida estándar para evaluar esa separación es el **índice de Gini** — una función cuadrática. **DNH-DT propone reemplazarla con la ley racional del paper.**
 
 ### La analogía formal
 
@@ -70,7 +70,7 @@ La medida estándar para evaluar esa separación es el **índice de Gini** — u
 En lugar del índice de Gini, DNH-DT usa:
 
 ```
-I_DNH(nodo, γ) = exp(−γ · S)
+I_DNH(nodo, γ) = 1 / (1 + γ · S)
 ```
 
 donde:
